@@ -19,7 +19,14 @@ jokes = ["why was the broom late for work? It over-swept.",
          "What kind of bugs tell the time? A clock roach.",
          "Why didn't scientists trust the atoms? because they made everything up.",
          "why did math look sad? its because it had too many problems.",
-         "Why don't skeletons fight eachother? because they don't have the guts."]
+         "Why don't skeletons fight eachother? because they don't have the guts."
+         " Parallel lines have so much in common… It’s a shame they’ll never meet.",
+         "Why did the computer go to therapy? It had too many bytes from a bad memory.",
+         "Why did the scarecrow win an award? Because he was outstanding in his field!",
+         "Why did the banana go to the doctor? Because it wasn’t peeling well."
+         "What kind of music do mummies listen to? Wrap music.",
+         "Why can't you give Elsa a balloon? Because she’ll let it go!",
+         "What do you call cheese that isn’t yours? Nacho cheese!"]
 
 
 # Function to make the assistant speak
@@ -75,6 +82,8 @@ def ai_assistant():
                 tell_jokes()
             elif "open" in command or "visit" in command:
                 open_website(command)
+            elif "who are you" in command:
+                whoami()
             elif "wikipedia" in command:
                 search_wikipedia(command)
             elif "add task" in command:
@@ -95,8 +104,12 @@ def ai_assistant():
 # Function for jokes:
 def tell_jokes():
     joke = random.choice(jokes)
-    print(joke)
+    speak(joke)
 
+
+# function for whoami:
+def whoami():
+    speak(f"I am {name}, your personal assistant.")
 
 # Tasks:
 # Function to add a task to the to-do list
