@@ -68,7 +68,7 @@ def recognize_speech():
         return None
 
 # Main function for the assistant
-name = "Levi" # user can change the name in the code
+name = "Tars" # user can change the name in the code
 def ai_assistant():
     speak(f"Hello! My name is {name}, How can I assist you today?")
     
